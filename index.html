@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yarno Ritzen — Investigative Journalist · OSINT &amp; Visual Investigations</title>
+
+  <meta name="description" content="Investigative journalist specialising in open-source intelligence, satellite imagery and visual investigations. IRE-winning, BAFTA-nominated work for the Al Jazeera Investigative Unit.">
+  <meta name="author" content="Yarno Ritzen">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Yarno Ritzen — Investigative Journalist · OSINT &amp; Visual Investigations">
+  <meta property="og:description" content="IRE-winning, BAFTA-nominated investigations using satellite imagery, geolocation, vessel and aircraft tracking, and metadata forensics.">
+  <meta property="og:url" content="https://yarnoritzen.com/">
+  <meta property="og:image" content="https://yarnoritzen.com/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (drop favicon.svg into repo root, or replace with an .ico) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Inter (sans) + JetBrains Mono (mono). One <link>, two families. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Person schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yarno Ritzen",
+    "jobTitle": "Investigative Journalist",
+    "url": "https://yarnoritzen.com",
+    "sameAs": [
+      "https://www.aljazeera.com/author/yarno_ritzen_201492282519994200",
+      "https://www.linkedin.com/in/YarnoRitzen"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Al Jazeera Investigative Unit"
+    },
+    "nationality": "Dutch",
+    "knowsAbout": [
+      "Open-source intelligence",
+      "Satellite imagery analysis",
+      "Geolocation",
+      "Maritime and aviation tracking",
+      "Link analysis",
+      "Digital forensics",
+      "Investigative journalism"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ---------- Reset & base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; display: block; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+    a:hover, a:focus { color: var(--accent-hover); }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* ---------- Tokens ---------- */
+    :root {
+      --bg: #0d0f12;
+      --surface: #14181d;
+      --surface-2: #1a1f25;
+      --border: #232a32;
+      --text: #e6e8eb;
+      --text-2: #a4abb3;
+      --text-3: #6b7280;
+      --accent: #4dd0e1;
+      --accent-hover: #80deea;
+      --accent-dim: rgba(77, 208, 225, 0.12);
+      --max: 1080px;
+      --pad-x: clamp(20px, 5vw, 56px);
+    }
+
+    /* ---------- Skip link (a11y) ---------- */
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--accent);
+      color: #000;
+      padding: 8px 14px;
+      font-weight: 600;
+      z-index: 999;
+    }
+    .skip:focus { left: 12px; top: 12px; }
+
+    /* ---------- Layout helpers ---------- */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+    section { padding: 84px 0; border-top: 1px solid var(--border); }
+    section:first-of-type { border-top: 0; }
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 12px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 36px;
+      color: var(--text);
+    }
+
+    /* ---------- Top bar ---------- */
+    header.top {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(13, 15, 18, 0.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .top-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px var(--pad-x);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      color: var(--text);
+      text-transform: uppercase;
+      border-top: 2px solid var(--accent);
+      padding-top: 6px;
+    }
+    nav.top-nav { display: flex; gap: 24px; }
+    nav.top-nav a {
+      color: var(--text-2);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav.top-nav a:hover { color: var(--text); }
+    @media (max-width: 640px) {
+      nav.top-nav { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 96px 0 60px; }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .hero-inner { grid-template-columns: minmax(0, 1fr) 280px; gap: 56px; }
+    }
+    .hero-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      justify-self: center;
+      background: var(--surface);
+    }
+    @media (min-width: 800px) {
+      .hero-photo { width: 260px; height: 260px; }
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.05); }
+
+    h1.hero-name {
+      font-size: clamp(40px, 7vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+    .hero-role {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 22px;
+    }
+    .hero-pitch {
+      font-size: clamp(17px, 1.6vw, 19px);
+      line-height: 1.55;
+      color: var(--text-2);
+      max-width: 56ch;
+      margin: 0 0 28px;
+    }
+    .hero-pitch strong { color: var(--text); font-weight: 600; }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background .15s ease, border-color .15s ease, color .15s ease;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #00161a;
+    }
+    .btn-primary:hover { background: var(--accent-hover); color: #00161a; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ---------- Work grid ---------- */
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .work-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 24px 22px;
+      transition: border-color .15s ease, transform .15s ease, background .15s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      background: var(--surface-2);
+    }
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin: 0 0 12px;
+    }
+    .card-meta .award {
+      color: var(--accent);
+    }
+    .card h3 {
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 0 0 10px;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .card p {
+      color: var(--text-2);
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .card-links {
+      margin-top: auto;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .card-links a {
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-links a::after {
+      content: "→";
+      transition: transform .15s ease;
+    }
+    .card-links a:hover::after { transform: translateX(3px); }
+
+    /* ---------- About ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media (min-width: 800px) {
+      .about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+    }
+    .about-bio p {
+      color: var(--text-2);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0 0 14px;
+    }
+    .about-bio p strong { color: var(--text); font-weight: 600; }
+
+    .toolbox-title {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .toolbox {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px 28px;
+    }
+    @media (min-width: 480px) {
+      .toolbox { grid-template-columns: 1fr 1fr; }
+    }
+    .toolbox li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--text-2);
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+    .toolbox li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .toolbox li strong { color: var(--text); font-weight: 600; }
+
+    /* ---------- Recognition ---------- */
+    .awards {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .awards li {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+    }
+    .awards li:last-child { border-bottom: 0; }
+    .award-year {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+    }
+    .award-name {
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .award-work {
+      color: var(--text-2);
+      font-size: 14px;
+      text-align: right;
+      font-style: italic;
+    }
+    @media (max-width: 640px) {
+      .awards li { grid-template-columns: 70px 1fr; }
+      .award-work { grid-column: 1 / -1; text-align: left; padding-left: 88px; }
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 600px) {
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .contact-card:hover { border-color: var(--accent); background: var(--surface-2); }
+    .contact-card a { color: var(--text); }
+    .contact-card-icon {
+      width: 32px;
+      height: 32px;
+      flex: none;
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border-radius: 6px;
+    }
+    .contact-card-body { display: flex; flex-direction: column; min-width: 0; }
+    .contact-card-label {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+    .contact-card-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      word-break: break-all;
+    }
+
+    .opsec-note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--text-3);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      line-height: 1.6;
+    }
+    .opsec-note strong { color: var(--accent); }
+
+    /* ---------- Footer ---------- */
+    footer.foot {
+      padding: 40px 0 56px;
+      border-top: 1px solid var(--border);
+      color: var(--text-3);
+      font-size: 13px;
+    }
+    .foot-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      letter-spacing: 0.08em;
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="top-inner">
+      <a href="#top" class="brand" aria-label="Yarno Ritzen — home">Yarno Ritzen</a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <p class="hero-role">Investigative Journalist · OSINT &amp; Visual Investigations</p>
+            <h1 class="hero-name">Yarno Ritzen</h1>
+            <p class="hero-pitch">
+              I run open-source investigations using <strong>satellite imagery, geolocation, vessel and aircraft tracking, and document-metadata forensics</strong>. My reporting has won an <strong>IRE Award</strong>, been nominated for two <strong>BAFTAs</strong>, and triggered US Treasury sanctions, government inquiries and a Royal Television Society Award. I publish in both long-form text and documentary video, working solo and inside the Al Jazeera Investigative Unit.
+            </p>
+            <div class="cta-row">
+              <!--
+                TODO: Drop a fresh CV PDF into the repo root as `yarno-ritzen-cv.pdf`.
+                The link below points to that filename relative to the site root.
+              -->
+              <a class="btn btn-primary" href="yarno-ritzen-cv.pdf" download>
+                Download CV (PDF)
+              </a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <!--
+              TODO: Replace `headshot.jpg` with your current profile photo (the black-and-white one
+              from the old site works perfectly). Same aspect ratio (square) and at least 520×520 px.
+            -->
+            <img src="headshot.jpg" alt="Portrait of Yarno Ritzen" width="520" height="520">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work">
+      <div class="container">
+        <p class="section-eyebrow">Selected Work</p>
+        <h2 class="section-title">Investigations &amp; exclusives</h2>
+
+        <div class="work-grid">
+
+          <!-- Card 1: Ghost Reporters -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2025</span>
+              <span>Solo byline</span>
+            </p>
+            <h3>Africa's Ghost Reporters</h3>
+            <p>Exposed a Russia-linked influence campaign that planted 200+ paid-for articles across Francophone Africa under 15+ fictitious journalists. Identified the stolen identity of a deceased Central African teacher via reverse image analysis; pulled Cyrillic strings and a Russian phone number from Word-document metadata; reverse-traced the number to a former Internet Research Agency operator with Wagner Group ties.</p>
+            <div class="card-links">
+              <a href="https://www.aljazeera.com/features/2025/3/20/the-ghost-reporters-writing-pro-russian-propaganda-in-west-africa" target="_blank" rel="noopener">Read</a>
+              <a href="https://www.youtube.com/watch?v=QneziQl_iCY" target="_blank" rel="noopener">Watch (25 min)</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Island of Secrets -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2021</span>
+              <span class="award">IRE Award winner</span>
+            </p>
+            <h3>The Island of Secrets</h3>
+            <p>Self-conceived visual investigation revealing India's covert military build-out on the tiny Mauritian atoll of Agaléga. Combined commercial satellite imagery across multi-year time series, vessel-tracking data and rare on-island sourcing to reconstruct the project and its strategic intent. Winner: IRE Award, Video Division 1.</p>
+            <div class="card-links">
+              <!-- TODO: replace # with direct AJ URL when convenient -->
+              <a href="https://www.ajiunit.com" target="_blank" rel="noopener">Read &amp; watch</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Somalia E-Visa -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2025</span>
+              <span>Solo byline · Exclusive</span>
+            </p>
+            <h3>Somalia E-Visa Security Exposure</h3>
+            <p>Probed Somalia's new electronic-visa portal and found a security flaw that left passport details of thousands of applicants downloadable to anyone who knew where to look. Verified the exposed data and responsibly disclosed before publication.</p>
+            <div class="card-links">
+              <a href="https://www.aljazeera.com/news/2025/12/18/new-somalia-evisa-security-puts-passport-details-of-thousands-at-risk" target="_blank" rel="noopener">Read</a>
+            </div>
+          </article>
+
+          <!-- Card 4: All the Prime Minister's Men -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2021</span>
+              <span class="award">Amnesty Media Award</span>
+            </p>
+            <h3>All the Prime Minister's Men</h3>
+            <p>OSINT and document analysis on the financial and corporate trails of a sitting head of government and his inner circle. The named former Bangladesh army chief was subsequently designated by the US Treasury in 2024.</p>
+            <div class="card-links">
+              <a href="https://www.ajiunit.com" target="_blank" rel="noopener">Read &amp; watch</a>
+            </div>
+          </article>
+
+          <!-- Card 5: Cyprus Papers -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2020</span>
+              <span class="award">BAFTA nomination · Webby</span>
+            </p>
+            <h3>The Cyprus Papers</h3>
+            <p>Analysis of leaked records identifying high-risk individuals — including convicts, fugitives and politically exposed persons — granted EU passports through the Cypriot golden-visa scheme. Triggered the programme's eventual termination.</p>
+            <div class="card-links">
+              <a href="https://www.ajiunit.com" target="_blank" rel="noopener">Read &amp; watch</a>
+            </div>
+          </article>
+
+          <!-- Card 6: Facebook Pages of Hate -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2020</span>
+              <span class="award">Lovie Gold (News &amp; Politics)</span>
+            </p>
+            <h3>Facebook Pages of Hate</h3>
+            <p>Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ combined likes, used to advertise concerts, releases and merchandise. Built a structured inventory of pages and networks across the platform.</p>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noopener">Read</a>
+            </div>
+          </article>
+
+          <!-- Card 7: Gold Mafia -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2023</span>
+              <span>Multi-part series</span>
+            </p>
+            <h3>The Gold Mafia</h3>
+            <p>Four-part investigation exposing Zimbabwean state-linked gold smuggling, money laundering and sanctions evasion. Triggered government inquiries.</p>
+            <div class="card-links">
+              <a href="https://www.ajiunit.com" target="_blank" rel="noopener">Read &amp; watch</a>
+            </div>
+          </article>
+
+          <!-- Card 8: Men Who Sell Football -->
+          <article class="card">
+            <p class="card-meta">
+              <span>Al Jazeera · 2022</span>
+              <span class="award">RTS Award · BAFTA nomination</span>
+            </p>
+            <h3>The Men Who Sell Football</h3>
+            <p>Entity tracing across intermediaries and front companies in a hidden marketplace where footballers' careers are traded. Combined undercover reporting with OSINT on the corporate structures behind the deals.</p>
+            <div class="card-links">
+              <a href="https://www.ajiunit.com" target="_blank" rel="noopener">Read &amp; watch</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+      <div class="container">
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-title">How I work</h2>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              I'm a Dutch investigative journalist based in Doha. I've spent the last seven years inside <strong>Al Jazeera's Investigative Unit</strong>, with earlier producer roles on the network's digital news desk and interactive department.
+            </p>
+            <p>
+              My approach is open-source first. I lean heavily on <strong>satellite imagery, geolocation and chronolocation, vessel and aircraft tracking, and entity resolution across large, leaked datasets</strong> — and I treat traditional reporting, source cultivation and secure communications as essential companions, not afterthoughts.
+            </p>
+            <p>
+              I publish in both long-form text and documentary video, work solo on self-conceived stories and inside teams on multi-month investigations, and increasingly build small editorial tools — scrapers, monitors, structured-data pipelines — using AI-assisted coding workflows so one-person investigations can run at the scale of a small engineering team.
+            </p>
+            <p>
+              Always interested in good leads. <a href="#contact">Reach out</a>.
+            </p>
+          </div>
+
+          <div class="about-tools">
+            <p class="toolbox-title">OSINT Toolbox</p>
+            <ul class="toolbox">
+              <li><strong>Satellite imagery</strong> · time-series change detection</li>
+              <li><strong>Geolocation</strong> &amp; chronolocation of photos and video</li>
+              <li><strong>Maritime tracking</strong> · AIS, port records</li>
+              <li><strong>Aviation tracking</strong> · ADS-B, flight records</li>
+              <li><strong>Link analysis</strong> across leaked datasets</li>
+              <li><strong>Asset &amp; corporate tracing</strong> across jurisdictions</li>
+              <li><strong>Image &amp; video verification</strong></li>
+              <li><strong>Document &amp; file-metadata forensics</strong></li>
+              <li><strong>Custom tooling</strong> · scrapers, monitors, pipelines (AI-assisted)</li>
+              <li><strong>Source protection</strong> · SecureDrop, E2E, OPSEC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECOGNITION ============ -->
+    <section id="recognition">
+      <div class="container">
+        <p class="section-eyebrow">Recognition</p>
+        <h2 class="section-title">Awards &amp; nominations</h2>
+
+        <ul class="awards">
+          <li>
+            <span class="award-year">2022</span>
+            <span class="award-name">Amnesty Media Award</span>
+            <span class="award-work">All the Prime Minister's Men</span>
+          </li>
+          <li>
+            <span class="award-year">2022</span>
+            <span class="award-name">Royal Television Society Award</span>
+            <span class="award-work">The Men Who Sell Football</span>
+          </li>
+          <li>
+            <span class="award-year">2022</span>
+            <span class="award-name">BAFTA Nomination</span>
+            <span class="award-work">The Men Who Sell Football</span>
+          </li>
+          <li>
+            <span class="award-year">2021</span>
+            <span class="award-name">IRE Award · Video Division 1</span>
+            <span class="award-work">The Island of Secrets</span>
+          </li>
+          <li>
+            <span class="award-year">2021</span>
+            <span class="award-name">BAFTA Nomination · Webby Awards</span>
+            <span class="award-work">The Cyprus Papers</span>
+          </li>
+          <li>
+            <span class="award-year">2021</span>
+            <span class="award-name">Lovie Awards</span>
+            <span class="award-work">Three Days That Stopped the World</span>
+          </li>
+          <li>
+            <span class="award-year">2020</span>
+            <span class="award-name">Lovie Gold (News &amp; Politics) · Lovie Bronze (Best Use of Stories)</span>
+            <span class="award-work">Facebook Pages of Hate</span>
+          </li>
+          <li>
+            <span class="award-year">2020</span>
+            <span class="award-name">NY TV &amp; Film Awards</span>
+            <span class="award-work">Diplomats for Sale · Anatomy of a Bribe</span>
+          </li>
+          <li>
+            <span class="award-year">—</span>
+            <span class="award-name">Online Media Awards &amp; Webbys</span>
+            <span class="award-work">Al Jazeera Interactive team</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+      <div class="container">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Get in touch</h2>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:info@yarnoritzen.com">
+            <span class="contact-card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span class="contact-card-body">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">info@yarnoritzen.com</span>
+            </span>
+          </a>
+
+          <a class="contact-card" href="mailto:ritzeny@aljazeera.net">
+            <span class="contact-card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span class="contact-card-body">
+              <span class="contact-card-label">Work email</span>
+              <span class="contact-card-value">ritzeny@aljazeera.net</span>
+            </span>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/YarnoRitzen" target="_blank" rel="noopener">
+            <span class="contact-card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.99 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.22 0z"/></svg>
+            </span>
+            <span class="contact-card-body">
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">YarnoRitzen</span>
+            </span>
+          </a>
+
+          <a class="contact-card" href="https://www.aljazeera.com/author/yarno_ritzen_201492282519994200" target="_blank" rel="noopener">
+            <span class="contact-card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <span class="contact-card-body">
+              <span class="contact-card-label">Al Jazeera portfolio</span>
+              <span class="contact-card-value">aljazeera.com/author</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="opsec-note">
+          <strong>For sources:</strong> sensitive tips are best sent over Signal or via Al Jazeera's SecureDrop — message me on email and I'll share a secure channel. Don't send anything sensitive via standard email.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span>© 2026 Yarno Ritzen</span>
+      <span>Built with care · Doha</span>
+    </div>
+  </footer>
+</body>
+</html>
