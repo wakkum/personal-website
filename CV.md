@@ -3,7 +3,7 @@
 info@yarnoritzen.com · yarnoritzen.com · +974 7764 1518 · Currently Doha, Qatar · Dutch national (EU)
 
 ## PROFILE
-Investigative journalist with seven years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work combines satellite imagery, geolocation, and tracking of ships and aircraft to produce high-impact accountability journalism on military, political, and financial stories across the globe. I'm comfortable working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
+Investigative journalist with seven years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work combines satellite imagery, geolocation, and tracking of maritime and aviation traffic with advanced digital forensics—including phone number attribution, social media pattern analysis, and locating hard-to-find individuals through hidden digital footprints. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
 
 ## SELECTED INVESTIGATIONS
 
@@ -51,6 +51,7 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 ## OSINT TOOLBOX
 *   **Visual investigations:** satellite imagery (commercial providers; change detection across time series), geolocation and chronolocation of photos and video, image and video verification.
 *   **Movement tracking:** maritime (AIS, port records) and aviation (ADS-B) tracking; cross-referencing with corporate and shipping records.
+*   **Digital forensics:** phone number attribution, social media pattern analysis, and locating individuals through online footprints, email addresses, and hidden profiles.
 *   **Data investigations:** link analysis and entity resolution across large, unstructured and confidential datasets; cross-jurisdictional asset and corporate tracing.
 *   **Source protection & digital security:** SecureDrop (project lead on implementation/liaison), end-to-end encryption, OPSEC for sources and reporters.
 *   **Custom Tooling & Engineering:** Build bespoke Python scrapers, monitors, and structured-data pipelines using AI-assisted coding (Claude/Gemini) to **securely scale OSINT collection without compromising source data.**
