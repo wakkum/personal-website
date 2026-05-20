@@ -16,12 +16,15 @@ Probed Somalia’s new electronic-visa portal and found a security flaw that lef
 **The Island of Secrets — IRE Award (Video, Division 1), 2021**
 Self-conceived visual investigation and **interactive long-form text feature** revealing India’s covert military build-out on the Mauritian atoll of Agaléga. Combined commercial satellite imagery across multi-year time series, vessel-tracking data and rare on-island sourcing to reconstruct the project and its strategic intent. Published as long-form video and written feature.
 
+**Facebook Pages of Hate — Lovie Gold (News & Politics) / Bronze (Best Use of Stories), 2020**
+Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ combined likes by building a structured inventory of the network across the platform.
+
 **Al Jazeera Investigative Unit — collaborative contributions**
 *   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — OSINT on financial and corporate trails of a sitting head of government; the named former army chief was subsequently sanctioned by the US Treasury in 2024.
 *   **The Gold Mafia (2023)** — multi-part series exposing Zimbabwean state-linked gold smuggling, money laundering and sanctions evasion; triggered government inquiries.
 *   **The Men Who Sell Football (RTS Award; BAFTA nomination, 2022)** — entity tracing across intermediaries and front companies.
 *   **The Cyprus Papers (BAFTA nomination; Webby Awards, 2021)** — analysis of leaked records to identify high-risk individuals granted EU passports.
-*   **Authored exclusive text investigations derived from major projects**, including deep-dives on the EU training of Bangladesh's RAB death squad and Swiss/Zimbabwean gold smuggling networks.
+*   **Authored exclusive text investigations spinning off from major projects**, including paired exclusives revealing how Bangladesh’s US-sanctioned RAB paramilitary unit obtained intelligence training, mass-surveillance equipment and police dogs from the UK, Poland and the Netherlands; and deep-dives on Swiss/Zimbabwean gold smuggling networks.
 
 ## EXPERIENCE
 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Investigative Strategy Memo — Yarno Ritzen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-sans: 'Inter', sans-serif;
+      --font-serif: 'Lora', serif;
+      --text-main: #1a1a1a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 1in;
+      font-family: var(--font-serif);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-font-smoothing: antialiased;
+    }
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    .memo-header {
+      font-family: var(--font-sans);
+      border-bottom: 2px solid #000;
+      margin-bottom: 24pt;
+      padding-bottom: 12pt;
+    }
+    .memo-title {
+      font-weight: 800;
+      font-size: 14pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12pt;
+      display: block;
+    }
+    .memo-meta {
+      font-size: 9.5pt;
+      display: grid;
+      grid-template-columns: 60pt 1fr;
+      gap: 4pt;
+    }
+    .memo-meta strong { text-transform: uppercase; font-size: 8.5pt; letter-spacing: 0.05em; }
+    
+    h2 {
+      font-family: var(--font-sans);
+      font-size: 10pt;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 24pt 0 12pt;
+      font-weight: 700;
+    }
+    h3 {
+      font-family: var(--font-sans);
+      font-size: 11pt;
+      margin: 16pt 0 6pt;
+      font-weight: 700;
+    }
+    p { margin-bottom: 10pt; }
+    ul { margin-bottom: 12pt; padding-left: 18pt; }
+    li { margin-bottom: 4pt; }
+    .sketch-box {
+      background: #f9f9f9;
+      padding: 12pt 18pt;
+      border-left: 3px solid #ddd;
+      margin-bottom: 18pt;
+    }
+    .sketch-box h3 { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <div class="memo-header">
+    <span class="memo-title">Strategy Memo: OSINT & Accountability</span>
+    <div class="memo-meta">
+      <strong>To:</strong> <span>International Investigations Editor, The New York Times</span>
+      <strong>From:</strong> <span>Yarno Ritzen</span>
+      <strong>Date:</strong> <span>19 May 2026</span>
+    </div>
+  </div>
+
+  <h2>I. The Lens: OSINT as an Accountability Engine</h2>
+  <p>I approach Open Source Intelligence (OSINT) not as a technical support function, but as a primary engine for high-impact accountability journalism. My work is focused on finding the "digital smoking gun"—the specific data point (a Cyrillic string in document metadata, a pattern of AIS gaps, or a multi-year satellite change-series) that forces an official response when traditional reporting reaches a dead end.</p>
+  <p>Inside Al Jazeera’s Investigative Unit, I have spent six years building a routine working method that stitches together maritime and aviation traffic analysis, digital forensics, and custom-built data monitors. My goal at the Times would be to apply this toolkit to the world's most opaque stories, reacting to breaking news in real-time while maintaining the methodical pace of long-term enterprise investigations.</p>
+
+  <h2>II. The Toolbox: Scaling the Search</h2>
+  <p>A major differentiator I bring is the ability to build <strong>custom editorial tooling</strong>. Using AI-assisted coding (Claude, Gemini), I develop bespoke scrapers and data monitors to "listen" to the world. This allows a single reporter to monitor hundreds of entities—ships, aircraft, corporate registries, or social media networks—at the scale of a small engineering team, without ever compromising sensitive source data via public models.</p>
+
+  <h2>III. Investigative Sketches: Four Angles</h2>
+
+  <div class="sketch-box">
+    <h3>1. The Russian Shadow Fleet: Mapping the Enablers</h3>
+    <p>While much has been written about the tankers themselves, the Western and Gulf infrastructure keeping Russia’s oil flowing remains under-reported.</p>
+    <ul>
+      <li><strong>The Approach:</strong> I would build a live dataset of AIS gaps (dark activity) paired with targeted satellite tasking around ship-to-ship transfer zones like the Laconian Gulf and the Strait of Hormuz.</li>
+      <li><strong>The "How":</strong> I would connect these movements to corporate registries in the Marshall Islands and Seychelles, then cross-reference with P&I cover providers and bunkering service logs to expose the financial enablers profiting from the trade.</li>
+    </ul>
+  </div>
+
+  <div class="sketch-box">
+    <h3>2. Gaza: The Satellite Witness</h3>
+    <p>Once active fighting recedes, the satellite record becomes the only honest witness to the totality of destruction and the realities of reconstruction.</p>
+    <ul>
+      <li><strong>The Approach:</strong> A systematic, longitudinal comparison of schools, hospitals, and water infrastructure.</li>
+      <li><strong>The "How":</strong> I would pair high-resolution Maxar/Planet imagery with chronolocated open-source footage from local Telegram channels to verify official accounts of specific strikes, bypass access issues, and document potential war crimes.</li>
+    </ul>
+  </div>
+
+  <div class="sketch-box">
+    <h3>3. China’s Next Agaléga: The Dual-Use Pivot</h3>
+    <p>China’s footprint across the Indian Ocean and the Solomons is often obscured behind "civilian" infrastructure projects.</p>
+    <ul>
+      <li><strong>The Approach:</strong> I would apply the "Agaléga methodology" (reconstructing covert military builds from commercial data) to China's most opaque maritime projects.</li>
+      <li><strong>The "How":</strong> By overlaying multi-year satellite time-series with aviation tail-number tracking and personnel-movement data, I would seek to identify the moment strategic strategic intent shifts toward military use.</li>
+    </ul>
+  </div>
+
+  <div class="sketch-box">
+    <h3>4. Disinformation Factories: Following the Metadata</h3>
+    <p>Building on my <em>Ghost Reporters</em> investigation, I would track the next generation of influence campaigns seeding pro-Kremlin narratives across the Global South.</p>
+    <ul>
+      <li><strong>The Approach:</strong> Hunting for the structural signatures of coordinated campaigns across seemingly independent "news" sites.</li>
+      <li><strong>The "How":</strong> I would use custom scrapers to analyze metadata from thousands of documents on suspect domains, looking for common authorship strings or shared server infrastructure that ties disparate "ghost" journalists to a single operator.</li>
+    </ul>
+  </div>
+
+  <h2>IV. Collaborative Value</h2>
+  <p>I thrive in the "team story discussion." I see my role as a bridge between raw digital evidence and the narrative desk. Whether it is working with the <strong>Graphics team</strong> to translate complex AIS patterns into an interactive map, or partnering with <strong>Video producers</strong> to build a 3D reconstruction of a strike zone, I understand how to make invisible data visible and compelling for a global audience.</p>
+</body>
+</html>
