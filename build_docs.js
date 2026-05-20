@@ -97,7 +97,7 @@ const cvChildren = [
   heading2("Profile"),
   para([
     text(
-      "Award-winning investigative journalist with eleven years at Al Jazeera — the last seven inside the " +
+      "Award-winning investigative journalist with eleven years at Al Jazeera — the last six inside the " +
       "Investigative Unit, after earlier producer roles on the digital news desk and interactive department. " +
       "IRE-winning, BAFTA-nominated work combining satellite imagery analysis, geolocation and " +
       "chronolocation, ship and aircraft tracking, and exclusive confidential datasets to produce " +
@@ -166,7 +166,7 @@ const cvChildren = [
   // Experience
   heading2("Experience"),
 
-  roleHeader("Producer — Al Jazeera Investigative Unit", "Doha, Qatar · Oct 2019 – Present"),
+  roleHeader("Producer — Al Jazeera Investigative Unit", "Doha, Qatar · Dec 2019 – Present"),
   bullet([text("Conceive, report and write OSINT-led investigations end-to-end — solo bylines and team contributions — using satellite imagery analysis, geolocation and chronolocation of photos and video, vessel and aircraft tracking, and structured analysis of large, unstructured datasets.")]),
   bullet([text("Cross-reference leaked and acquired confidential datasets — building entity/link networks across people, companies, properties and movements to surface hidden relationships.")]),
   bullet([text("Partner with investigative reporters, correspondents, video producers and graphics colleagues to deliver exclusives across text, long-form video and digital formats; also write breaking-news and impact follow-ups between major projects.")]),

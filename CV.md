@@ -3,7 +3,7 @@
 info@yarnoritzen.com · yarnoritzen.com · +974 7764 1518 · Currently Doha, Qatar · Dutch national (EU)
 
 ## PROFILE
-Investigative journalist with seven years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work focuses on advanced digital forensics—including phone number attribution, social media pattern analysis, and locating individuals who do not want to be found—complemented by satellite imagery analysis and the tracking of maritime and aviation traffic. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
+Investigative journalist with six years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work focuses on advanced digital forensics—including phone number attribution, social media pattern analysis, and locating individuals who do not want to be found—complemented by satellite imagery analysis and the tracking of maritime and aviation traffic. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
 
 ## SELECTED INVESTIGATIONS
 
@@ -30,7 +30,7 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 
 ## EXPERIENCE
 
-**Producer — Al Jazeera Investigative Unit** | Doha, Qatar · Oct 2019 – Present
+**Producer — Al Jazeera Investigative Unit** | Doha, Qatar · Dec 2019 – Present
 *   Lead OSINT investigations using digital forensics, social media analysis, and phone number attribution to locate individuals and map hidden networks.
 *   Analyse satellite imagery and track maritime and aviation traffic to break international stories and verify events on the ground.
 *   Map hidden relationships across leaked datasets by building entity-link networks of people, properties, and corporate assets.

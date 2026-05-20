@@ -32,10 +32,10 @@ India is not the only state quietly turning small islands into forward bases. Ch
 *   **The Approach:** I would apply the "Agaléga methodology" (reconstructing covert military builds from commercial data) to China's most opaque maritime projects.
 *   **The "How":** By overlaying multi-year satellite time-series with aviation tail-number tracking and personnel-movement data, I would seek to identify the moment a "civilian" project shifts to a military forward base, revealing strategic intent before it is officially acknowledged.
 
-### 4. Disinformation Factories: Following the Metadata
-Building on my *Ghost Reporters* investigation, I would track the next generation of influence campaigns seeding pro-Kremlin or pro-China narratives across the Global South.
-*   **The Approach:** Hunting for the structural signatures of coordinated campaigns across "news" sites that appear independent but are technically linked.
-*   **The "How":** I would use custom scrapers to pull and analyze metadata from thousands of PDFs and Word documents hosted on suspect domains, looking for common authorship strings, Russian-language system remnants, or shared server infrastructure that ties disparate "ghost" journalists to a single operator.
+### 4. The Recycled Weapons Loop: Tracing Donor Hardware into Insurgent Hands
+Western governments have been told for over a decade that the weapons they ship to African Union peacekeeping missions in Somalia, Mali and the CAR end up in the hands of the armed groups those missions are mandated to fight. They keep shipping. The gap between **what donors know and what they will admit** is the accountability story.
+*   **The Approach:** I would treat fifteen years of fragmentary UN Panel of Experts findings as a single dataset, and trace specific weapons from their donor of origin, through documented diversion incidents, to the atrocities they enabled.
+*   **The "How":** I would build custom scrapers to harvest every serial number, weapon type and seizure location from UN Panel reports on Somalia, CAR and Mali, then cross-reference against US DSCA transfers, EU export disclosures and FOI'd end-use monitoring certificates. Layered over contributing-nation rotation schedules, the chain becomes traceable. The Yemen reporting that triggered US congressional scrutiny is the template — **Africa has never had its version**.
 
 ## IV. COLLABORATIVE VALUE
 
