@@ -22,7 +22,7 @@ const baseStyles = {
     { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true,
       run: { size: 22, bold: true, font: FONT, color: "333333", allCaps: true },
       paragraph: {
-        spacing: { before: 160, after: 40 }, outlineLevel: 1,
+        spacing: { before: 220, after: 80 }, outlineLevel: 1,
         border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: "888888", space: 2 } }
       } },
     { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true,
@@ -97,13 +97,11 @@ const cvChildren = [
   heading2("Profile"),
   para([
     text(
-      "Award-winning investigative journalist with eleven years at Al Jazeera — the last six inside the " +
-      "Investigative Unit, after earlier producer roles on the digital news desk and interactive department. " +
-      "IRE-winning, BAFTA-nominated work combining satellite imagery analysis, geolocation and " +
-      "chronolocation, ship and aircraft tracking, and exclusive confidential datasets to produce " +
-      "accountability journalism across Asia, Africa, Europe and the Middle East. Solo reporter on " +
-      "self-conceived investigations and collaborator on team projects — comfortable delivering all-formats " +
-      "journalism in text, long-form video and interactive output, end-to-end."
+      "Award-winning investigative journalist with eleven years at Al Jazeera — six inside the Investigative " +
+      "Unit. IRE-winning, BAFTA-nominated work combining satellite imagery analysis, geolocation and " +
+      "chronolocation, ship and aircraft tracking, and confidential datasets to produce accountability " +
+      "journalism across Asia, Africa, Europe and the Middle East. Solo on self-conceived investigations " +
+      "and collaborator on team projects, delivering across text, long-form video and interactive formats."
     )
   ]),
 
@@ -115,12 +113,11 @@ const cvChildren = [
     children: [text("Africa’s Ghost Reporters — Al Jazeera Investigations (solo byline), March 2025", { bold: true })]
   }),
   para([text(
-    "Exposed a Russia-linked influence campaign using 15+ fictitious journalists and at least 200 paid-for " +
-    "articles seeded across Francophone Africa to amplify anti-French, pro-Russian narratives. Identified " +
-    "the stolen identity behind the lead persona — a deceased Central African teacher — via reverse image " +
-    "analysis; surfaced Cyrillic strings and a Russian phone number inside Word-document metadata; reverse-" +
-    "traced the number to a former Internet Research Agency operator with Wagner Group ties. Published as a " +
-    "long-form text feature and a 25-minute documentary."
+    "Exposed a Russia-linked influence campaign using 15+ fictitious journalists and 200+ paid-for " +
+    "articles seeded across Francophone Africa. Identified the deceased Central African teacher whose " +
+    "photo was stolen for the lead persona, surfaced Cyrillic strings and a Russian phone number inside " +
+    "Word-document metadata, and reverse-traced the number to a former Internet Research Agency operator " +
+    "with Wagner Group ties. Published as long-form text and a 25-minute documentary."
   )]),
 
   new Paragraph({
@@ -157,7 +154,7 @@ const cvChildren = [
     spacing: { before: 60, after: 40 },
     children: [text("Al Jazeera Investigative Unit — collaborative contributions", { bold: true })]
   }),
-  bullet([text("All the Prime Minister’s Men (Amnesty Media Award, 2022) — OSINT on financial and corporate trails of a sitting head of government. Solo follow-up exclusive (Dec 2022) revealed UK spy-training trips by a paramilitary unit later sanctioned for human-rights abuses; the named former army chief was sanctioned by the US Treasury in 2024.")]),
+  bullet([text("All the Prime Minister’s Men (Amnesty Media Award, 2022) — OSINT on the financial and corporate trails of a sitting head of government; my solo follow-up surfaced UK spy-training trips by a paramilitary unit later sanctioned for human-rights abuses, and the named army chief was sanctioned by the US Treasury in 2024.")]),
   bullet([text("The Gold Mafia (2023) — multi-part series exposing Zimbabwean state-linked gold smuggling, money laundering and sanctions evasion; triggered government inquiries.")]),
   bullet([text("The Men Who Sell Football (RTS Award; BAFTA nomination, 2022) — entity tracing across intermediaries and front companies.")]),
   bullet([text("The Cyprus Papers (BAFTA nomination; Webby Awards, 2021) — analysis of leaked records to identify high-risk individuals granted EU passports.")]),
@@ -178,12 +175,8 @@ const cvChildren = [
   bullet([text("Reported and wrote breaking news, features, explainers and background pieces in a fast-paced, global newsroom.")]),
   bullet([text("Identified original story angles and reworked agency copy to fit Al Jazeera’s editorial voice.")]),
 
-  roleHeader("Assistant Producer — Al Jazeera Interactive Department", "Doha, Qatar · Aug 2014 – Jun 2017"),
-  bullet([text("Built data-driven infographics and interactive web productions embedded in long-form journalism.")]),
-  bullet([text("Explored emerging visual storytelling: 360-degree video, VR and gamified explainers. Multiple Online Media and Webby recognitions with the team.")]),
-
-  roleHeader("Producer (intern) — NU.nl", "Hoofddorp, Netherlands · Aug – Dec 2013"),
-  bullet([text("Data journalism, infographics, and original news reporting.")]),
+  roleHeader("Producer — Al Jazeera Interactive Department", "Doha, Qatar · Aug 2014 – Jun 2017"),
+  bullet([text("Built data-driven infographics and interactive web productions embedded in long-form journalism; explored emerging visual storytelling — 360-degree video, VR, gamified explainers — with multiple Online Media and Webby recognitions.")]),
 
   // Skills
   heading2("OSINT Toolbox"),
@@ -191,8 +184,7 @@ const cvChildren = [
   bullet([new TextRun({ text: "Movement tracking: ", bold: true }), text("maritime (AIS, port records) and aviation (ADS-B) tracking; cross-referencing with corporate and shipping records.")]),
   bullet([new TextRun({ text: "Data investigations: ", bold: true }), text("link analysis and entity resolution across large, unstructured and confidential datasets; cross-jurisdictional asset and corporate tracing.")]),
   bullet([new TextRun({ text: "Source protection & digital security: ", bold: true }), text("SecureDrop, end-to-end encryption, OPSEC for sources and reporters.")]),
-  bullet([new TextRun({ text: "Custom tooling & AI: ", bold: true }), text("build editorial scrapers, monitors and data pipelines using AI-assisted coding (Claude Code, Gemini CLI); comfortable on the command line and working from engineer-built systems through to bespoke CMSes.")]),
-  bullet([new TextRun({ text: "Storytelling: ", bold: true }), text("news writing, long-form features, documentary scripts, explainers, and interactive web productions.")]),
+  bullet([new TextRun({ text: "Custom tooling & AI: ", bold: true }), text("build editorial scrapers, monitors and data pipelines using AI-assisted coding (Claude Code, Gemini CLI); production deployment with Git and Bash, plus GIS and cartographic workflows for geospatial analysis.")]),
 
   // Education
   heading2("Education"),

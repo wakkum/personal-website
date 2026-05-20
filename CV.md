@@ -3,12 +3,12 @@
 info@yarnoritzen.com · yarnoritzen.com · +974 7764 1518 · Currently Doha, Qatar · Dutch national (EU)
 
 ## PROFILE
-Investigative journalist with six years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work focuses on advanced digital forensics—including phone number attribution, social media pattern analysis, and locating individuals who do not want to be found—complemented by satellite imagery analysis and the tracking of maritime and aviation traffic. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
+Award-winning investigative journalist with eleven years at Al Jazeera — six inside the Investigative Unit. IRE-winning, BAFTA-nominated work combining satellite imagery analysis, geolocation and chronolocation, ship and aircraft tracking, and confidential datasets to produce accountability journalism across Asia, Africa, Europe and the Middle East. Solo on self-conceived investigations and collaborator on team projects, delivering across text, long-form video and interactive formats.
 
 ## SELECTED INVESTIGATIONS
 
 **Africa’s Ghost Reporters — Al Jazeera Investigations (solo byline), March 2025**
-Exposed a Russia-linked influence campaign that used fake journalists to seed pro-Kremlin narratives across Francophone Africa. I identified the dead teacher whose identity was stolen for the lead persona, pulled Cyrillic strings from Word metadata, and reverse-traced a Russian phone number to a Wagner-linked operator. Published as a long-form text feature and a 25-minute documentary.
+Exposed a Russia-linked influence campaign using 15+ fictitious journalists and 200+ paid-for articles seeded across Francophone Africa. Identified the deceased Central African teacher whose photo was stolen for the lead persona, surfaced Cyrillic strings and a Russian phone number inside Word-document metadata, and reverse-traced the number to a former Internet Research Agency operator with Wagner Group ties. Published as long-form text and a 25-minute documentary.
 
 **Somalia E-Visa Security Exposure — Al Jazeera Investigations (solo byline), December 2025**
 Probed Somalia’s new electronic-visa portal and found a security flaw that left passport details of thousands of applicants downloadable to anyone who knew where to look. Verified the exposed data and responsibly disclosed before publication.
@@ -25,7 +25,7 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 **Al Jazeera Investigative Unit — collaborative contributions**
 *   **The Gold Mafia (2023)** — digital footprint analysis and tracking of key individuals involved in a multi-part series exposing state-linked gold smuggling and money laundering.
 *   **The Men Who Sell Football (RTS Award; BAFTA nomination, 2022)** — located key individuals and mapped their digital footprints to reveal a hidden marketplace for footballer trades.
-*   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — identification of key individuals and geolocation of luxury properties owned by associates of a sitting head of government.
+*   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — OSINT on the financial and corporate trails of a sitting head of government; my solo follow-up surfaced UK spy-training trips by a paramilitary unit later sanctioned for human-rights abuses, and the named army chief was sanctioned by the US Treasury in 2024.
 *   **The Cyprus Papers (BAFTA nomination; Webby Awards, 2021)** — analysis of leaked records to identify high-risk individuals granted EU passports.
 
 ## EXPERIENCE
@@ -43,12 +43,8 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 *   **Managed the unit’s internship programme for two years**, overseeing the recruitment, training, and output of junior journalists.
 *   Identified original story angles and reworked agency copy to fit Al Jazeera’s editorial voice.
 
-**Assistant Producer — Al Jazeera Interactive Department** | Doha, Qatar · Aug 2014 – Jun 2017
-*   Built data-driven infographics and interactive web productions embedded in long-form journalism.
-*   Explored emerging visual storytelling: 360-degree video, VR and gamified explainers. Multiple Online Media and Webby recognitions with the team.
-
-**Producer (intern) — NU.nl** | Hoofddorp, Netherlands · Aug – Dec 2013
-*   Data journalism, infographics, and original news reporting.
+**Producer — Al Jazeera Interactive Department** | Doha, Qatar · Aug 2014 – Jun 2017
+*   Built data-driven infographics and interactive web productions embedded in long-form journalism; explored emerging visual storytelling — 360-degree video, VR, gamified explainers — with multiple Online Media and Webby recognitions.
 
 ## OSINT TOOLBOX
 *   **Digital forensics:** phone number attribution, social media pattern analysis, and locating individuals through online footprints, email addresses, and hidden profiles.
@@ -56,8 +52,7 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 *   **Movement tracking:** maritime (AIS, port records) and aviation (ADS-B) tracking; cross-referencing with corporate and shipping records.
 *   **Data investigations:** link analysis and entity resolution across large, unstructured and confidential datasets; cross-jurisdictional asset and corporate tracing.
 *   **Source protection & digital security:** SecureDrop (project lead on implementation/liaison), end-to-end encryption, OPSEC for sources and reporters.
-*   **Custom Tooling & Engineering:** Build bespoke Python scrapers, monitors, and structured-data pipelines using AI-assisted coding (Claude/Gemini) to **securely scale OSINT collection without compromising source data.**
-*   **Storytelling:** news writing, narrative long-form features, documentary scripts, explainers, and interactive web productions.
+*   **Custom tooling & AI:** Build bespoke Python scrapers, monitors and structured-data pipelines using AI-assisted coding (Claude Code, Gemini CLI); production deployment with Git and Bash, plus GIS and cartographic workflows for geospatial analysis.
 
 ## EDUCATION
 **B.A. Journalism** — Utrecht University of Applied Sciences, Netherlands.
