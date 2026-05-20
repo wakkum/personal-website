@@ -3,7 +3,7 @@
 info@yarnoritzen.com · yarnoritzen.com · +974 7764 1518 · Currently Doha, Qatar · Dutch national (EU)
 
 ## PROFILE
-Investigative journalist with seven years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work combines satellite imagery, geolocation, and tracking of maritime and aviation traffic with advanced digital forensics—including phone number attribution, social media pattern analysis, and locating hard-to-find individuals through hidden digital footprints. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
+Investigative journalist with seven years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work focuses on advanced digital forensics—including phone number attribution, social media pattern analysis, and locating individuals who do not want to be found—complemented by satellite imagery analysis and the tracking of maritime and aviation traffic. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
 
 ## SELECTED INVESTIGATIONS
 
@@ -20,18 +20,18 @@ Self-conceived visual investigation and **interactive long-form text feature** r
 Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ combined likes by building a structured inventory of the network across the platform.
 
 **Al Jazeera Investigative Unit — collaborative contributions**
-*   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — OSINT on financial and corporate trails of a sitting head of government; the named former army chief was subsequently sanctioned by the US Treasury in 2024.
-*   **The Gold Mafia (2023)** — multi-part series exposing Zimbabwean state-linked gold smuggling, money laundering and sanctions evasion; triggered government inquiries.
-*   **The Men Who Sell Football (RTS Award; BAFTA nomination, 2022)** — entity tracing across intermediaries and front companies.
+*   **The Gold Mafia (2023)** — digital footprint analysis and tracking of key individuals involved in a multi-part series exposing state-linked gold smuggling and money laundering.
+*   **The Men Who Sell Football (RTS Award; BAFTA nomination, 2022)** — located key individuals and mapped their digital footprints to reveal a hidden marketplace for footballer trades.
+*   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — identification of key individuals and geolocation of luxury properties owned by associates of a sitting head of government.
 *   **The Cyprus Papers (BAFTA nomination; Webby Awards, 2021)** — analysis of leaked records to identify high-risk individuals granted EU passports.
 *   **Authored exclusive text investigations spinning off from major projects**, including paired exclusives revealing how Bangladesh’s US-sanctioned RAB paramilitary unit obtained intelligence training, mass-surveillance equipment and police dogs from the UK, Poland and the Netherlands; and deep-dives on Swiss/Zimbabwean gold smuggling networks.
 
 ## EXPERIENCE
 
 **Producer — Al Jazeera Investigative Unit** | Doha, Qatar · Oct 2019 – Present
-*   Run OSINT-led investigations using satellite imagery, geolocation, and tracking of maritime and aviation traffic to break international stories.
+*   Lead OSINT investigations using digital forensics, social media analysis, and phone number attribution to locate individuals and map hidden networks.
+*   Analyse satellite imagery and track maritime and aviation traffic to break international stories and verify events on the ground.
 *   Map hidden relationships across leaked datasets by building entity-link networks of people, properties, and corporate assets.
-*   Partner with reporters and graphics teams to translate complex digital forensics into narrative text and documentary video.
 *   **Project lead for Al Jazeera’s SecureDrop implementation**; pitched the idea and worked with the Freedom of the Press Foundation to establish a secure intake channel for the network.
 *   **Own the unit’s written output** for Aljazeera.com—from breaking-news analysis to long-form investigative features.
 *   **Build custom editorial tools** (Python scrapers, monitors, data pipelines) using AI-assisted coding to scale OSINT research independently.
@@ -49,9 +49,9 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 *   Data journalism, infographics, and original news reporting.
 
 ## OSINT TOOLBOX
+*   **Digital forensics:** phone number attribution, social media pattern analysis, and locating individuals through online footprints, email addresses, and hidden profiles.
 *   **Visual investigations:** satellite imagery (commercial providers; change detection across time series), geolocation and chronolocation of photos and video, image and video verification.
 *   **Movement tracking:** maritime (AIS, port records) and aviation (ADS-B) tracking; cross-referencing with corporate and shipping records.
-*   **Digital forensics:** phone number attribution, social media pattern analysis, and locating individuals through online footprints, email addresses, and hidden profiles.
 *   **Data investigations:** link analysis and entity resolution across large, unstructured and confidential datasets; cross-jurisdictional asset and corporate tracing.
 *   **Source protection & digital security:** SecureDrop (project lead on implementation/liaison), end-to-end encryption, OPSEC for sources and reporters.
 *   **Custom Tooling & Engineering:** Build bespoke Python scrapers, monitors, and structured-data pipelines using AI-assisted coding (Claude/Gemini) to **securely scale OSINT collection without compromising source data.**
