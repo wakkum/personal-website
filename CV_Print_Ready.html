@@ -16,11 +16,11 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      padding: 1in;
+      padding: 0.6in 0.9in;
       font-family: var(--font-sans);
       color: var(--text-main);
-      line-height: 1.5;
-      font-size: 11pt;
+      line-height: 1.45;
+      font-size: 10.5pt;
       -webkit-font-smoothing: antialiased;
     }
     @page {
@@ -40,12 +40,12 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-size: 9pt;
-      margin-bottom: 12pt;
+      margin-bottom: 10pt;
     }
     .contact-info {
       font-size: 9pt;
       color: #666;
-      margin-bottom: 24pt;
+      margin-bottom: 12pt;
     }
     h2 {
       font-family: var(--font-sans);
@@ -53,22 +53,22 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       border-bottom: 1px solid #eee;
-      padding-bottom: 4pt;
-      margin: 24pt 0 12pt;
+      padding-bottom: 3pt;
+      margin: 12pt 0 7pt;
       font-weight: 700;
     }
     .profile {
       font-family: var(--font-serif);
-      font-size: 11.5pt;
-      line-height: 1.6;
-      margin-bottom: 20pt;
+      font-size: 11pt;
+      line-height: 1.5;
+      margin-bottom: 10pt;
     }
     .investigation {
-      margin-bottom: 16pt;
+      margin-bottom: 9pt;
     }
     .investigation strong {
       display: block;
-      font-size: 11pt;
+      font-size: 10.5pt;
       margin-bottom: 2pt;
     }
     .investigation p {
@@ -76,14 +76,26 @@
       font-family: var(--font-serif);
       color: #333;
     }
+    .investigation .co-author {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      display: block;
+      margin-top: 2pt;
+    }
     .experience-item {
-      margin-bottom: 20pt;
+      margin-bottom: 10pt;
     }
     .experience-header {
       display: flex;
       justify-content: space-between;
       font-weight: 700;
       margin-bottom: 4pt;
+    }
+    .experience-header span:last-child {
+      font-weight: 400;
+      color: #555;
+      font-size: 9.5pt;
     }
     ul {
       padding-left: 14pt;
@@ -99,35 +111,58 @@
       gap: 8pt 24pt;
       list-style: none;
       padding: 0;
+      margin: 0;
     }
     .toolbox li {
       font-family: var(--font-sans);
       font-size: 9.5pt;
       margin-bottom: 0;
       padding-left: 0;
+      line-height: 1.45;
     }
     .toolbox li strong { font-weight: 600; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18pt;
+      margin-top: 4pt;
+    }
+    .footer-grid p {
+      font-family: var(--font-serif);
+      margin: 0;
+      font-size: 10pt;
+    }
+    .footer-grid .label {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4pt;
+      color: #333;
+    }
   </style>
 </head>
 <body>
   <h1>Yarno Ritzen</h1>
-  <div class="header-sub">Investigative Journalist · OSINT & Visual Investigations</div>
+  <div class="header-sub">Investigative Journalist · OSINT &amp; Visual Investigations</div>
   <div class="contact-info">
-    info@yarnoritzen.com · yarnoritzen.com · +974 7764 1518 · Doha, Qatar (Dutch national, EU)
+    info@yarnoritzen.com · yarnoritzen.com · +974 7764 1518 · Currently Doha, Qatar · Dutch national (EU)
   </div>
 
   <section>
     <h2>Profile</h2>
     <div class="profile">
-      Investigative journalist with six years inside Al Jazeera’s Investigative Unit, specialising in open-source intelligence and visual investigations. My work focuses on advanced digital forensics—including phone number attribution, social media pattern analysis, and locating individuals who do not want to be found—complemented by satellite imagery analysis and the tracking of maritime and aviation traffic. I produce high-impact accountability journalism on military, political, and financial stories globally, working solo on self-conceived stories or alongside large teams to deliver exclusives across all formats.
+      Award-winning investigative journalist with eleven years at Al Jazeera — six inside the Investigative Unit. IRE-winning, BAFTA-nominated work combining satellite imagery analysis, geolocation and chronolocation, ship and aircraft tracking, and confidential datasets to produce accountability journalism across Asia, Africa, Europe and the Middle East. Solo on self-conceived investigations and collaborator on team projects, delivering across text, long-form video and interactive formats.
     </div>
   </section>
 
   <section>
     <h2>Selected Investigations</h2>
+
     <div class="investigation">
       <strong>Africa’s Ghost Reporters — Al Jazeera Investigations (solo byline), March 2025</strong>
-      <p>Exposed a Russia-linked influence campaign that used fake journalists to seed pro-Kremlin narratives across Francophone Africa. I identified the dead teacher whose identity was stolen for the lead persona, pulled Cyrillic strings from Word metadata, and reverse-traced a Russian phone number to a Wagner-linked operator. Published as a long-form text feature and a 25-minute documentary.</p>
+      <p>Exposed a Russia-linked influence campaign using 15+ fictitious journalists and 200+ paid-for articles seeded across Francophone Africa. Identified the deceased Central African teacher whose photo was stolen for the lead persona, surfaced Cyrillic strings and a Russian phone number inside Word-document metadata, and reverse-traced the number to a former Internet Research Agency operator with Wagner Group ties. Published as long-form text and a 25-minute documentary.</p>
     </div>
 
     <div class="investigation">
@@ -137,25 +172,21 @@
 
     <div class="investigation">
       <strong>The Island of Secrets — IRE Award (Video, Division 1), 2021</strong>
-      <p>Self-conceived visual investigation and interactive long-form text feature revealing India’s covert military build-out on the Mauritian atoll of Agaléga. Combined commercial satellite imagery across multi-year time series, vessel-tracking data and rare on-island sourcing to reconstruct the project and its strategic intent.</p>
+      <p>Self-conceived visual investigation and interactive long-form text feature revealing India’s covert military build-out on the Mauritian atoll of Agaléga. Combined commercial satellite imagery across multi-year time series, vessel-tracking data and rare on-island sourcing to reconstruct the project and its strategic intent. Published as long-form video and written feature.</p>
     </div>
 
     <div class="investigation">
-      <strong>Bangladesh RAB: Intelligence Training and Surveillance — Al Jazeera (solo byline), 2022</strong>
-      <p>Authored exclusive text investigations spinning off from major projects, including paired exclusives revealing how Bangladesh’s US-sanctioned RAB paramilitary unit obtained intelligence training, mass-surveillance equipment and police dogs from the UK, Poland and the Netherlands.</p>
+      <strong>Bangladesh RAB: Intelligence Training and Surveillance — Al Jazeera (co-byline), December 2022</strong>
+      <p>Paired exclusives revealing how Bangladesh’s US-sanctioned RAB paramilitary unit obtained intelligence training, mass-surveillance equipment and police dogs from the UK, Poland and the Netherlands.</p>
+      <span class="co-author">Co-bylined with Zulkarnain Saer Khan and Kevin Hirten.</span>
     </div>
 
-    <div class="investigation">
-      <strong>Facebook Pages of Hate — Lovie Gold (News & Politics) / Bronze (Best Use of Stories), 2020</strong>
-      <p>Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ combined likes by building a structured inventory of the network across the platform.</p>
-    </div>
-
-    <div class="investigation" style="margin-top: 10pt;">
+    <div class="investigation" style="margin-top: 8pt;">
       <strong>Al Jazeera Investigative Unit — Collaborative Contributions</strong>
       <ul>
         <li><strong>The Gold Mafia (2023)</strong> — digital footprint analysis and tracking of key individuals involved in a multi-part series exposing state-linked gold smuggling and money laundering.</li>
         <li><strong>The Men Who Sell Football (RTS Award; BAFTA nomination, 2022)</strong> — located key individuals and mapped their digital footprints to reveal a hidden marketplace for footballer trades.</li>
-        <li><strong>All the Prime Minister’s Men (Amnesty Media Award, 2022)</strong> — identification of key individuals and geolocation of luxury properties owned by associates of a sitting head of government.</li>
+        <li><strong>All the Prime Minister’s Men (Amnesty Media Award, 2022)</strong> — OSINT on the financial and corporate trails of a sitting head of government; the named army chief was subsequently sanctioned by the US Treasury in 2024.</li>
         <li><strong>The Cyprus Papers (BAFTA nomination; Webby Awards, 2021)</strong> — analysis of leaked records to identify high-risk individuals granted EU passports.</li>
       </ul>
     </div>
@@ -163,17 +194,18 @@
 
   <section>
     <h2>Experience</h2>
+
     <div class="experience-item">
       <div class="experience-header">
         <span>Producer — Al Jazeera Investigative Unit</span>
-        <span>Doha, Qatar · 2019 – Present</span>
+        <span>Doha, Qatar · Dec 2019 – Present</span>
       </div>
       <ul>
         <li>Lead OSINT investigations using digital forensics, social media analysis, and phone number attribution to locate individuals and map hidden networks.</li>
         <li>Analyse satellite imagery and track maritime and aviation traffic to break international stories and verify events on the ground.</li>
         <li>Map hidden relationships across leaked datasets by building entity-link networks of people, properties, and corporate assets.</li>
-        <li><strong>Project lead for Al Jazeera’s SecureDrop implementation</strong>; pitched the idea and worked with the Freedom of the Press Foundation to establish a secure intake channel.</li>
-        <li><strong>Own the unit’s written output</strong> for Aljazeera.com—from breaking-news analysis to long-form investigative features.</li>
+        <li><strong>Project lead for Al Jazeera’s SecureDrop implementation</strong>; pitched the idea and worked with the Freedom of the Press Foundation to establish a secure intake channel for the network.</li>
+        <li><strong>Own the unit’s written output</strong> for Aljazeera.com — from breaking-news analysis to long-form investigative features.</li>
         <li><strong>Build custom editorial tools</strong> (Python scrapers, monitors, data pipelines) using AI-assisted coding to scale OSINT research independently.</li>
       </ul>
     </div>
@@ -181,11 +213,22 @@
     <div class="experience-item">
       <div class="experience-header">
         <span>Producer — Al Jazeera Digital News Desk</span>
-        <span>Doha, Qatar · 2017 – 2019</span>
+        <span>Doha, Qatar · Jul 2017 – Sep 2019</span>
       </div>
       <ul>
-        <li>Reported and wrote breaking news, features, and explainers in a fast-paced global newsroom.</li>
-        <li><strong>Managed the unit’s internship programme</strong>, overseeing the recruitment and output of junior journalists.</li>
+        <li>Reported and wrote breaking news, features, explainers and background pieces in a fast-paced, global newsroom.</li>
+        <li><strong>Managed the unit’s internship programme for two years</strong>, overseeing the recruitment, training and output of junior journalists.</li>
+        <li>Identified original story angles and reworked agency copy to fit Al Jazeera’s editorial voice.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span>Producer — Al Jazeera Interactive Department</span>
+        <span>Doha, Qatar · Aug 2014 – Jun 2017</span>
+      </div>
+      <ul>
+        <li>Built data-driven infographics and interactive web productions embedded in long-form journalism; explored emerging visual storytelling — 360-degree video, VR, gamified explainers — with multiple Online Media and Webby recognitions.</li>
       </ul>
     </div>
   </section>
@@ -193,21 +236,30 @@
   <section>
     <h2>OSINT Toolbox</h2>
     <ul class="toolbox">
-      <li><strong>Digital forensics:</strong> phone number attribution, social media pattern analysis.</li>
-      <li><strong>Visual investigations:</strong> satellite imagery, geolocation, verification.</li>
-      <li><strong>Person research:</strong> locating individuals through online footprints & profiles.</li>
-      <li><strong>Movement tracking:</strong> maritime (AIS) and aviation (ADS-B) tracking.</li>
-      <li><strong>Data investigations:</strong> link analysis and entity resolution across large datasets.</li>
-      <li><strong>Source protection:</strong> SecureDrop (project lead), end-to-end encryption, OPSEC.</li>
-      <li><strong>Custom Tooling:</strong> Bespoke scrapers and pipelines built using AI-assisted coding.</li>
-      <li><strong>Storytelling:</strong> Narrative long-form, documentary scripts, interactive production.</li>
+      <li><strong>Digital forensics:</strong> phone number attribution, social media pattern analysis, locating individuals through online footprints, email addresses, hidden profiles.</li>
+      <li><strong>Visual investigations:</strong> satellite imagery (change detection across time series), geolocation and chronolocation, image and video verification, cartographic visualisation.</li>
+      <li><strong>Movement tracking:</strong> maritime (AIS, port records) and aviation (ADS-B); cross-referenced with corporate and shipping records.</li>
+      <li><strong>Data investigations:</strong> link analysis and entity resolution across large, unstructured and confidential datasets; cross-jurisdictional asset and corporate tracing.</li>
+      <li><strong>Source protection &amp; security:</strong> SecureDrop (project lead on implementation), end-to-end encryption, OPSEC for sources and reporters.</li>
+      <li><strong>Custom tooling &amp; AI:</strong> Python scrapers, monitors and structured-data pipelines built with AI-assisted coding (Claude Code, Gemini CLI); production via Git, command line and a self-hosted homelab behind Cloudflare zero-trust.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Education & Languages</h2>
-    <p style="font-family: var(--font-serif); margin: 0;"><strong>B.A. Journalism</strong> — Utrecht University of Applied Sciences, Netherlands.</p>
-    <p style="font-size: 9.5pt; color: #666; margin-top: 4pt;">Dutch (native) · English (fluent) · German & French (reading proficiency)</p>
+    <div class="footer-grid">
+      <div>
+        <div class="label">Education</div>
+        <p><strong>B.A. Journalism</strong> — Utrecht University of Applied Sciences, Netherlands.</p>
+      </div>
+      <div>
+        <div class="label">Languages</div>
+        <p><strong>Dutch</strong> (fluent) · <strong>English</strong> (fluent) · <strong>German</strong> (reading) · <strong>French</strong> (reading)</p>
+      </div>
+    </div>
+    <div style="margin-top: 6pt; display: flex; gap: 10pt; align-items: baseline;">
+      <div class="label" style="font-family: var(--font-sans); font-weight: 600; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.08em; color: #333; flex: none;">References</div>
+      <p style="font-family: var(--font-serif); margin: 0; font-size: 9.5pt; color: #555;">Available on request — former managers at Al Jazeera and Amnesty International UK.</p>
+    </div>
   </section>
 </body>
 </html>

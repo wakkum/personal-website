@@ -204,7 +204,7 @@ const cvChildren = [
 
   // References
   heading2("References"),
-  para([text("Available on request — strong references from former managers at Al Jazeera, Thomson Reuters Foundation and Amnesty International UK.")]),
+  para([text("Available on request — strong references from former managers at Al Jazeera and Amnesty International UK.")]),
 ];
 
 const cvDoc = new Document({

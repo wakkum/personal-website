@@ -30,7 +30,7 @@ I bring the technical foundations—OSINT, geolocation, and satellite analysis�
 • Experience handling messy, leaked datasets and the high-stakes source protection they require. I was the project lead for Al Jazeera’s SecureDrop implementation, pitching the initiative and working with the Freedom of the Press Foundation to build our network’s secure whistleblower channel.
 • Instincts for visual investigations that ship in text, video, and interactive formats.
 • **Custom tooling.** I use AI-assisted coding workflows (Claude, Gemini) to build the scrapers and monitors that allow a one-person investigation to run at the scale of a small engineering team—without ever putting sensitive source data into public models.
-• EU citizenship and a full willingness to relocate to whichever bureau makes sense for the team.
+• EU citizenship and a full willingness to relocate. Brussels is the most natural fit on the list — native Dutch and reading French line up directly with the bureau, and the EU/NATO/EEAS institutional environment is the densest OSINT-sourcing ground in Europe — but I’m open to any of the other Continental bureaus.
 
 I’d be glad to talk further and show you what I’d chase first.
 

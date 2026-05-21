@@ -16,16 +16,13 @@ Probed Somalia’s new electronic-visa portal and found a security flaw that lef
 **The Island of Secrets — IRE Award (Video, Division 1), 2021**
 Self-conceived visual investigation and **interactive long-form text feature** revealing India’s covert military build-out on the Mauritian atoll of Agaléga. Combined commercial satellite imagery across multi-year time series, vessel-tracking data and rare on-island sourcing to reconstruct the project and its strategic intent. Published as long-form video and written feature.
 
-**Bangladesh RAB: Intelligence Training and Surveillance — Al Jazeera (solo byline), 2022**
-Authored exclusive text investigations spinning off from major projects, including paired exclusives revealing how Bangladesh’s US-sanctioned RAB paramilitary unit obtained intelligence training, mass-surveillance equipment and police dogs from the UK, Poland and the Netherlands.
-
-**Facebook Pages of Hate — Lovie Gold (News & Politics) / Bronze (Best Use of Stories), 2020**
-Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ combined likes by building a structured inventory of the network across the platform.
+**Bangladesh RAB: Intelligence Training and Surveillance — Al Jazeera (co-byline), December 2022**
+Paired exclusives revealing how Bangladesh’s US-sanctioned RAB paramilitary unit obtained intelligence training, mass-surveillance equipment and police dogs from the UK, Poland and the Netherlands. Co-bylined with Zulkarnain Saer Khan and Kevin Hirten.
 
 **Al Jazeera Investigative Unit — collaborative contributions**
 *   **The Gold Mafia (2023)** — digital footprint analysis and tracking of key individuals involved in a multi-part series exposing state-linked gold smuggling and money laundering.
 *   **The Men Who Sell Football (RTS Award; BAFTA nomination, 2022)** — located key individuals and mapped their digital footprints to reveal a hidden marketplace for footballer trades.
-*   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — OSINT on the financial and corporate trails of a sitting head of government; my solo follow-up surfaced UK spy-training trips by a paramilitary unit later sanctioned for human-rights abuses, and the named army chief was sanctioned by the US Treasury in 2024.
+*   **All the Prime Minister’s Men (Amnesty Media Award, 2022)** — OSINT on the financial and corporate trails of a sitting head of government; the named army chief was subsequently sanctioned by the US Treasury in 2024.
 *   **The Cyprus Papers (BAFTA nomination; Webby Awards, 2021)** — analysis of leaked records to identify high-risk individuals granted EU passports.
 
 ## EXPERIENCE
@@ -48,11 +45,11 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 
 ## OSINT TOOLBOX
 *   **Digital forensics:** phone number attribution, social media pattern analysis, and locating individuals through online footprints, email addresses, and hidden profiles.
-*   **Visual investigations:** satellite imagery (commercial providers; change detection across time series), geolocation and chronolocation of photos and video, image and video verification.
+*   **Visual investigations:** satellite imagery (commercial providers; change detection across time series), geolocation and chronolocation of photos and video, image and video verification, cartographic visualisation for investigative stories.
 *   **Movement tracking:** maritime (AIS, port records) and aviation (ADS-B) tracking; cross-referencing with corporate and shipping records.
 *   **Data investigations:** link analysis and entity resolution across large, unstructured and confidential datasets; cross-jurisdictional asset and corporate tracing.
 *   **Source protection & digital security:** SecureDrop (project lead on implementation/liaison), end-to-end encryption, OPSEC for sources and reporters.
-*   **Custom tooling & AI:** Build bespoke Python scrapers, monitors and structured-data pipelines using AI-assisted coding (Claude Code, Gemini CLI); production deployment with Git and Bash, plus GIS and cartographic workflows for geospatial analysis.
+*   **Custom tooling & AI:** Build, deploy and run bespoke Python scrapers, monitors and structured-data pipelines using AI-assisted coding (Claude Code, Gemini CLI); production via Git, command-line workflows and a self-hosted homelab fronted by Cloudflare zero-trust authentication.
 
 ## EDUCATION
 **B.A. Journalism** — Utrecht University of Applied Sciences, Netherlands.
@@ -61,4 +58,4 @@ Documented 120+ neo-Nazi and far-right music pages on Facebook with 800,000+ com
 Dutch (fluent) · English (fluent) · German (reading proficiency) · French (reading proficiency)
 
 ## REFERENCES
-Available on request — strong references from former managers at Al Jazeera, Thomson Reuters Foundation and Amnesty International UK.
+Available on request — strong references from former managers at Al Jazeera and Amnesty International UK.
